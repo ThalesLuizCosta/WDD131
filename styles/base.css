@@ -33,10 +33,17 @@ header {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-header,
-main {
+header{
+	background-color: #bbb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header, main {
 	margin: 0 auto;
-    background-color: var(--nav-link-color);
 }
 
 h1 {
@@ -44,23 +51,25 @@ h1 {
 }
 
 nav {
-	background-color: var(--accent1-color);
+	background-color: #36454f;
 	margin: 0 auto;
 	max-width: 800px;
 }
+
 nav ul {
 	list-style-type: none;
 }
-.navigation nav a {
+
+nav a {
 	display: block;
-	color: var(--nav-link-color);
+	color: #fff;
 	text-align: center;
 	padding: 1rem;
 	text-decoration: none;
 }
 
 nav a:hover {
-	border: 1px solid var(--primary-color);
+	text-decoration: overline;
 }
 
 .active {
@@ -71,6 +80,7 @@ nav a:hover {
 @media (min-width: 640px) {
 	nav ul {
 		display: flex;
+		justify-content: center;
 	}
 	nav ul li {
 		flex: 1 1 100%;

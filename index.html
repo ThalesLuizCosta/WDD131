@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Dynamic Web Fundamentals - Thales Luiz Costa</title>
     <link rel="stylesheet" href="styles/base.css">
+    <script src="week01/scripts/getdates.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -12,26 +13,49 @@
 <body>
     <header>
         <h1>WDD131: Dynamic Web Fundamentals - Thales Luiz Costa</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/thalesluizcosta/">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=por&id=p37#p37">Favorite Scripture</a></li>
+                <li><a href="week01/basic-layout.html">Final Project</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/thalesluizcosta/">LinkedIn</a></li>
-            <li><a href="https://byui.instructure.com/">I-Learn</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=por&id=p37#p37">Scripture</a></li>
-            <li><a href="week01/basic-layout.html">Begin Project</a></li>
-        </ul>
-    </nav>
-    <section>
-        <main>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quo corrupti explicabo, eaque nam sit, ullam quia voluptates soluta autem, asperiores iste distinctio excepturi maiores ad optio nulla eligendi in. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere fuga adipisci quod illum necessitatibus ea non dolorem itaque repellat eveniet neque obcaecati ab, voluptates eum sit doloremque magni eos expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nobis animi tenetur, debitis fuga earum corporis sit ex, obcaecati maxime quam enim minima aperiam dolorum ratione repellendus ducimus nam explicabo!</p>
-        </main>
-        <aside>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis suscipit eum, numquam totam odio, illo similique veritatis assumenda saepe sunt exercitationem mollitia earum odit? Dolor reiciendis perspiciatis natus tempore magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi porro minus officiis at possimus dolor voluptatum doloribus sint ratione dolorem exercitationem, voluptas nam officia, dolore consectetur aliquam suscipit facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore amet similique reprehenderit? Inventore commodi vero doloremque doloribus! Facere fugit excepturi vero nostrum, maiores quam veniam accusantium amet molestias expedita nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim aperiam, fugiat ad at quae ex, odio, quia sint voluptates velit voluptatibus. In asperiores nisi debitis dignissimos eos sequi ea quos.</p>
-        </aside>
-    </section>
-<footer>
-    <p><span id="currentyear">© 🏄🏽 Thales Luiz Costa 🏄🏽‍♂️ - Brazil</span></p>
-    <p></p>
-</footer>
+    <main>
+        <section class="card">
+            <header>
+                <h4>About Me</h4>
+            </header> 
+            <div>
+            <img class="profile" src="images/profile.JPG" alt="Hello, my name is UDO DAVID" width="200">         
+            <p>Hello! My name is Thales Luiz Costa and I am from Santos, Brazil. v    Hello! My name is Thales and I'm from Santos Brazil, I love being with my family, they are an essential part of me, I've been a member of The Church of Jesus Christ of Latter-day Saints since 2003, I served a mission in Brazil Salvador Sul, I love surfing (but I still don't have time for that), I'm very grateful for everything our Heavenly Father blesses us so much, Because I love nature, I love animals and most of all... I love being alive and being able to breathe the good air that God has given us, I am always serving others, as our Savior Jesus Christ taught us, "he who wants to be the greatest in the kingdom of God, let him also be your servant," then if I am here for one purpose, it is to serve people. That's it!</p>
+            </div>
+            <div class="subsection">
+            <h3>Santos, Brazil</h3>
+            <img class="flag" src="images/flag_of_brazil.png" alt="Hello, my name is Thales Luiz Costa" width="200">         
+            <p>Santos is a municipality in the state of São Paulo in Brazil. It is the seat of the Metropolitan Region of Baixada Santista and has the largest economic participation in the aforementioned region. It is home to the largest port in Latin America, which is primarily responsible for the city's economic dynamics alongside tourism, fishing, and commerce. It ranks 5th among the most important non-capitals for the Brazilian economy and 10th according to quality of life.</p>
+            </div>
+        </section>
+        <section class="card">
+            <header>
+                <h4>How to Find me</h4>
+            </header>
+            <div class="subsection2">
+            <ul>
+                <li><a href="https://www.facebook.com/ThalesLuizCosta">Facebook</a></li>
+                <li><a href="https://www.instagram.com/leko13">Instagram</a></li>
+                <li><a href="https://twitter.com/leko13">X/Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/thalesluizcosta/">LinkedIn</a></li>
+            </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> 🏄🏽 Thales Luiz Costa 🏄🏽‍♂️ -  Brazil
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html> 

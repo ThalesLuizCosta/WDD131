@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis&display=swap');
+
+:root {
+    --primary-color : #2F9EFF;
+    --secondary-color : #887D6E;
+    --accent1-color : #fff;
+    --accent2-color : #000;
+    --heading-font : 'Archivo Black',serif;
+    --paragraph-font : Dosis,serif;
+    --nav-background-color : #fff;
+    --nav-link-color : #064e8d;
+    --nav-hover-link-color : #fff;
+    --nav-hover-background-color : rgb(6, 78, 141, 0.8);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Sansita", sans-serif;
+}
+
+/* mobile **************************/
+header {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header,
+main {
+	margin: 0 auto;
+    background-color: var(--nav-link-color);
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+nav {
+	background-color: var(--accent1-color);
+	margin: 0 auto;
+	max-width: 800px;
+}
+nav ul {
+	list-style-type: none;
+}
+.navigation nav a {
+	display: block;
+	color: var(--nav-link-color);
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	border: 1px solid var(--primary-color);
+}
+
+.active {
+	color: yellow;
+}
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	    }
+    }

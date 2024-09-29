@@ -3,11 +3,12 @@ document.getElementById('currentyear').textContent = new Date().getFullYear();
 
 document.getElementById('lastModified').textContent = "Last Modification: " + document.lastModified;
 
-document.addEventListener('DOMContentLoaded', () => {
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav');
 
-menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('open');
+    });
 });
-});
+

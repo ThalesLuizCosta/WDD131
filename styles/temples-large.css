@@ -4,6 +4,7 @@
     nav ul {
         flex-direction: row;
         justify-content: right;
+        display: flex; /* Garante que o menu esteja visível em telas grandes */
     }
 
     nav li {
@@ -39,9 +40,8 @@
         padding-top: 0.5rem;
     }
 
-    nav ul {
-        display: flex;
+    /* Remova o display none em telas grandes */
+    .menu-toggle {
+        display: none;
     }
-
-        
 }

@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const navMenu = document.querySelector('nav');
 
     menuToggle.addEventListener('click', function () {
-        navMenu.classList.toggle('open');
+        navMenu.classList.toggle('open'); // Alterna a classe 'open' no <nav>
     });
 });
-

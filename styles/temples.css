@@ -26,7 +26,7 @@ h1 {
     top: 1rem;
     right: 1rem;
     cursor: pointer;
-    display: none; /* Ajuste para mostrar em telas pequenas */
+    display: none; /* Mostrado apenas em telas pequenas */
 }
 
 .hamburger, .close {
@@ -34,7 +34,7 @@ h1 {
 }
 
 .close {
-    display: none;
+    display: none; /* Esconde o ícone de "X" por padrão */
 }
 
 nav ul {
@@ -71,10 +71,19 @@ nav.open ul {
     align-items: center;
 }
 
-/* Mostra o botão do menu em telas pequenas */
+/* Esconde o ícone de hambúrguer e mostra o "X" quando o menu está aberto */
+nav.open .hamburger {
+    display: none;
+}
+
+nav.open .close {
+    display: inline-block;
+}
+
+/* Responsividade para telas menores que 768px */
 @media (max-width: 767px) {
     .menu-toggle {
-        display: block;
+        display: block; /* Exibe o botão de menu em telas pequenas */
     }
 
     nav ul {
@@ -89,8 +98,13 @@ nav.open ul {
 /* Exibe o menu normalmente em telas maiores */
 @media (min-width: 768px) {
     nav ul {
-        display: flex;
         flex-direction: row;
+        justify-content: right;
+        display: flex; /* Garante que o menu esteja visível em telas grandes */
+    }
+
+    nav li {
+        margin: 0 1rem;
     }
 
     .menu-toggle {
@@ -108,8 +122,14 @@ main h2 {
     margin-bottom: 1rem;
 }
 
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
 figure {
-    margin: 0 0 1rem 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -119,6 +139,7 @@ figure img {
 }
 
 figcaption {
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     margin-top: 0.5rem;

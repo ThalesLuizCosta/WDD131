@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis&display=swap');
-
 :root {
     --primary-color: #27526a;
     --secondary-color: #f8f49c;
 
-    --primary-font: 'Archivo Black',serif;
-    --secondary-font: Dosis,serif;
+    --primary-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --secondary-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header, footer {

@@ -307,7 +307,7 @@ h4 {
     margin: 20px auto; /* centraliza o parágrafo */
     text-align: justify; /* texto justificado */
     line-height: 1.8;
-    font-family: 'Arial', sans-serif;
+    font-family: var(--secundary-font);
 }
 
 /* Adicionando espaçamento entre as linhas de texto */

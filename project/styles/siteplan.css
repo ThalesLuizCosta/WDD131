@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #27526a;
+    --blue: rgb(29, 77, 114);
+
+    --primary-font : 'Archivo Black',serif;
+    --secundary-font : Dosis,serif;
+    --tertiary-font : Agdasima, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--secundary-font);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    padding: 0 20px;
+    background-color: #f0f4f8;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;  /* Hidden by default, only shows in small screens */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Hidden class to hide the menu in mobile view */
+.hidden {
+    display: none;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+.carousel-images img {
+    display: none;
+    width: 100%;
+    max-width: 850px;  /* Define a maximum width for medium size */
+    height: 650px;  /* Fixed height */
+    object-fit: cover;  /* Ensures that images fit within the set dimensions without distortion */
+    border-radius: 10px;  /* Optional: Add rounded corners to the images */
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#search {
+    margin-top: 30px;
+}
+
+#search-result {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;  /* Show hamburger icon */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+    nav ul.visible {
+        display: flex;
+    }
+}
+
+footer {
+    font-size: 1.2rem;
+    font-family: var(--tertiary-font);
+    padding: 1rem;
+    background-color: var(--blue);
+    color: #fff;
+}
+  
+  footer p {
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .carousel-images img {
+        max-width: 100%;  
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel-images img {
+        max-width: 600px;
+        height: 400px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--secundary-font);
+}
+
+/* Navigation menu styles */
+nav {
+    background-color: #27526a;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--tertiary-font);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #f8f49c;
+}
+
+/* Hamburger icon */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hidden on large screens */
+}
+
+/* Hidden class for responsive menu */
+.hidden {
+    display: none;
+}
+
+/* Responsive menu for smaller screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;  /* Show hamburger icon on small screens */
+    }
+
+    .nav-menu {
+        display: none;  /* Hide the menu initially on small screens */
+        flex-direction: column;
+        width: 100%;
+        background-color: #27526a;
+        position: absolute;
+        top: 60px;  /* Just below the navbar */
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 15px;
+    }
+
+    .nav-menu.active {
+        display: flex;  /* Show the menu when the hamburger icon is clicked */
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    color: #27526a;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Estilo mais clássico para o título principal */
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #1a3849;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: normal;
+    font-family: 'Verdana', sans-serif;
+}
+
+h4 {
+    font-size: 1.25rem;
+    color: #27526a;
+    text-align: center;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Estilos para o parágrafo */
+.p-style {
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #e2e8f0; /* borda sutil para destacar o texto */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* leve sombra para dar profundidade */
+    max-width: 800px;
+    margin: 20px auto; /* centraliza o parágrafo */
+    text-align: justify; /* texto justificado */
+    line-height: 1.8;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Adicionando espaçamento entre as linhas de texto */
+h2, h3, h4, .p-style {
+    margin-top: 20px;
+}

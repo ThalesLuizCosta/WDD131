@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Album</title>
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation menu -->
+    <nav>
+        <!-- Hamburger icon for smaller screens -->
+        <div class="menu-icon" id="menu-icon">&#9776;</div> <!-- Adicionado o ícone de hambúrguer -->
+        
+        <!-- Navigation menu links -->
+        <ul class="nav-menu" id="nav-menu"> <!-- Atribua a classe "nav-menu" e o ID "nav-menu" -->
+            <li><a href="#carousel">Photo Carousel</a></li>
+            <li><a href="#add-photo">Add Photos</a></li>
+            <li><a href="#search">Search Dates</a></li>
+        </ul>
+    </nav>
+
+    <!-- Photo Carousel -->
+    <section id="carousel">
+        <h2>Family Memories - History of a Wonderful Life</h2>
+        <h3>This site presents a simple and beautiful way for you and your family to store photos and stories of a wonderful life.</h3><br>
+        <h4>Are you tired of when you have a visitor, having to grab a family album from the dusty closet?</h4><br>
+        <h4>Would you like to have all your photos and stories of your photos kept in a secure place that will not be erased over time?</h4><br>
+        <p class="p-style">The "Family Memories" website is designed to serve as a digital space where families can showcase and preserve their cherished memories. It features an interactive photo carousel displaying family photos with captions, allowing users to reminisce about past events like reunions, vacations, and celebrations. Additionally, users can easily upload new photos, add captions, and search for images by date, making it a dynamic and personalized platform for keeping family memories organized and accessible across all devices.</p>
+        <div class="carousel">
+            <button class="prev">&#10094;</button>
+            <div class="carousel-images">
+                <img src="images/Me-before-mission.jpg" alt="Photo 1" class="active">
+                <img src="images/Me-as-a-missionary.jpg" alt="Photo 2">
+                <img src="images/Me-after-mission.jpg" alt="Photo 3">
+                <img src="images/Me-in-Itajaí.jpg" alt="Photo 4">
+                <img src="images/Me-and-my-sweetheart.jpg" alt="Photo 5">
+                <img src="images/I-love-our-love.jpg" alt="Photo 6">
+                <img src="images/Our-wedding.jpg" alt="Photo 7">
+                <img src="images/We-are-pregnant.jpg" alt="Photo 8">
+                <img src="images/Our-little-girl.jpg" alt="Photo 9">
+                <img src="images/Our-little-sunshine.jpg" alt="Photo 10">
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="caption">Photo 1 - My picture before my mission - 2003</div>
+    </section>
+
+    <!-- Form to add new photo -->
+    <section id="add-photo">
+        <h2>Add New Photo</h2>
+        <form id="photo-form">
+            <label for="photo-file">Choose a Photo:</label>
+            <input type="file" id="photo-file" accept="image/*">
+            
+            <label for="photo-caption">Caption:</label>
+            <input type="text" id="photo-caption" placeholder="Enter a caption for the photo">
+            
+            <button type="submit">Add Photo</button>
+        </form>
+    </section>
+
+    <!-- Field to search photos by year -->
+<section id="search">
+    <h2>Search Photos by Year</h2>
+    <p>Enter a year to search for related photos.</p>
+    <input type="number" id="photo-year" min="1900" max="2100" placeholder="Enter year">
+    <button onclick="searchPhotosByYear()">Search</button>
+    <div id="search-result"></div>
+</section>
+
+    <footer>
+        <p><span id="currentYear"></span> 🏄🏽‍♂️ Thales Luiz Costa 🏄🏽‍♂️</p>
+        <p class="highlight" id="lastModified">Last Modification: 15/08/1984 13:45:00</p>
+      </footer>
+
+</body>
+</html>

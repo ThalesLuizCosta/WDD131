@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Album</title>
-    <link rel="stylesheet" href="styles/siteplan.css">
-    <link rel="stylesheet" href="styles/siteplan-large.css">
-    <script src="scripts/siteplan.js" defer></script>
+    <link rel="stylesheet" href="styles/contact-form.css">
+    <script src="scripts/form.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -23,14 +22,42 @@
     </header>
     <main>
         <section>
+            
+            <form method="get" action="review.html" class="product">
+                <fieldset class="style-form">
+    
+                    <label>Overall Rating</label>
+                    <div class="rating">
+                        <div><label>☆</label><input type="radio" name="rating" id="onestar" required></div>
+                        <div><label>☆☆</label><input type="radio" name="rating" id="twostar" required></div>
+                        <div><label>☆☆☆</label><input type="radio" name="rating" id="threestar" required></div>
+                        <div><label>☆☆☆☆</label><input type="radio" name="rating" id="fourstar" required></div>
+                        <div><label>☆☆☆☆☆</label><input type="radio" name="rating" id="fivestar" required></div>
+                    </div>
+    
+                    <div>Which features did you find useful in the product?</div>
+                    <span class="apply"> (Check all that apply)</span>
+                    <label><input type="checkbox" name="durability" id="creative">Creative</label>
+                    <label><input type="checkbox" name="easyuse" id="ease">Ease of Use</label>
+                    <label><input type="checkbox" name="performance" id="perform">Performance</label>
+                    <label><input type="checkbox" name="design" id="design">Design</label>
+                    
+                    <label>Written Review <span class="optional">(Optional)</span></label>
+                    <textarea name="review" id="writtenreview" rows="4"></textarea>
+    
+                    <label>Your Name <span class="optional">(Optional)</span><input type="text" name="name" id="name"></label>
+    
+                    <input type="submit" value="Post My Review" class="button">
+                </fieldset>
+            </form>
+            
             <h2 class="contact">Contact Us</h2>
             <p class="question4">If you have any questions or would like to reach out, feel free to contact us through the following methods:</p>
             
-                <a href="thalesluizc@gmail.com">Send me an Email</a><br>
-                <a href="https://www.facebook.com/ThalesLuizCosta/">Follow me on Facebook</a><br>
-                <a href="https://www.instagram.com/leko13">Follow me on Instagram</a><br>
-                <a href="https://x.com/leko13">Follow me on X</a><br>
-                <a href="https://www.linkedin.com/in/thalesluizcosta"></i>Follow me  on LinkedIn</a>
+                <a href="https://www.facebook.com/ThalesLuizCosta/" class="link1">Follow me on Facebook</a><br>
+                <a href="https://www.instagram.com/leko13" class="link2">Follow me on Instagram</a><br>
+                <a href="https://x.com/leko13" class="link3">Follow me on X</a><br>
+                <a href="https://www.linkedin.com/in/thalesluizcosta" class="link4">Follow me  on LinkedIn</a>
         </section>
     </main>
 

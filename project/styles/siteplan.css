@@ -168,16 +168,6 @@ h2, h3, h4, .p-style {
     margin-top: 20px;
 }
 
-.home, .question1, .question2, .question3, .question4, .p-style, .contact{
+.home, .question1, .question2, .question3, .p-style{
     font-family: var(--paragraph-font);
-}
-
-a i {
-    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
-}
-
-a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #3a5890; /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
 }

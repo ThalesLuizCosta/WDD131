@@ -13,7 +13,6 @@
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 10px 0; /* Adiciona espaçamento ao cabeçalho */
     position: relative; /* Para posicionar o menu corretamente */
 }
 header h1 {
@@ -40,32 +39,13 @@ main {
     margin: auto;
     max-width: 95%;
 }
-section img {
-    width: 95%;
-    border: solid orange 3px;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgb(103, 118, 181);
-    max-width: 600px;
-}
 section {
     background-color: rgb(219, 219, 219);
     opacity: 90%;
     border: solid gray 1px;
     padding: 1rem;
 }
-#gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 1rem;
-    font-family: var(--paragraph-font);
-    font-size: 18px;
-    gap: 1rem;
-    padding-bottom: 10px;
-}
-#gallery h3 {
-    font-family: var(--heading-font);
-    font-size: 25px;
-}
+
 #menu {
     font-size: 1.5rem;
     border: 0;
@@ -99,6 +79,7 @@ nav a {
     color: white;
     font-family: var(--paragraph-font);
     width: 100%; /* Largura total dos links */
+    transition: color 0.3s ease; /* Transição suave para a cor do link */
 }
 nav a:hover {
     color: var(--accent1-color);
@@ -179,7 +160,7 @@ body main .photos{
 }
 
 .product input[type="submit"]:hover {
-    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    background-color: #454ba0; /* Cor de fundo ao passar o mouse */
 }
 
 /* Estilos para as mensagens opcionais */
@@ -188,42 +169,58 @@ body main .photos{
     color: #888; /* Cor da fonte para mensagens opcionais */
 }
 
+/* Exibe o menu de navegação como coluna, mas o mantém oculto por padrão */
 .navigation {
-    display: flex; /* Usa Flexbox para a navegação */
-    flex-direction: column; /* Alinha os links em coluna */
-    align-items: center; /* Centraliza os links */
-    position: absolute; /* Posiciona o menu de forma absoluta */
-    top: 60px; /* Ajuste conforme necessário */
-    right: 0; /* Alinha à direita */
-    width: 100%; /* Largura total */
-    display: none; /* Esconde o menu por padrão */
+    display: none; /* Esconde a navegação em telas pequenas */
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 10; /* Garante que o menu sobreponha o conteúdo */
+    transition: all 0.3s ease; /* Transição suave para a exibição do menu */
 }
 
-.open .navigation {
-    display: flex; /* Exibe o menu quando aberto */
+/* Mostra a navegação quando a classe "open" é adicionada */
+.navigation.open {
+    display: flex; /* Exibe o menu quando o botão é acionado */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 770px) {
+    /* Em telas grandes, exibe o menu completo e esconde o botão de hambúrguer */
     .navigation {
-        display: flex; /* Exibe o menu normalmente em telas grandes */
-        flex-direction: row; /* Alinha os links em linha */
-        position: static; /* Remove o posicionamento absoluto */
-        background-color: transparent; /* Remove o fundo em telas grandes */
+        display: flex; /* Exibe o menu horizontalmente */
+        flex-direction: row;
+        position: static;
     }
-
-    nav a {
-        display: block; /* Exibe os links em linha */
-        margin: 0 10px; /* Margem entre os links */
-    }
-
     #menu {
-        display: none; /* Esconde o menu de hambúrguer em telas grandes */
+        display: none; /* Esconde o botão de hambúrguer */
     }
 }
 
-.button {
-    font-family: var(--paragraph-font);
+@media (max-width: 769px) {
+    /* Em telas pequenas, exibe apenas o botão de hambúrguer */
+    #menu {
+        display: block; /* Exibe o botão de hambúrguer */
+    }
+    .open {
+        display: flex; /* Exibe o menu quando o botão é acionado */
+    }
+
+    .product {
+        padding: 15px; /* Menos padding em telas menores */
+    }
+    
+    /* Mostra a navegação quando a classe "open" é adicionada */
+    
+    .button {
+        font-family: var(--paragraph-font);
+    }
 }
+
+
 
 .contact, .question4, .link1, .link2, .link3, .link4{
     font-family: var(--paragraph-font);
